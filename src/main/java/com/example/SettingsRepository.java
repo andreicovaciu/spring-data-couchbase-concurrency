@@ -12,7 +12,7 @@ public interface SettingsRepository extends CouchbasePagingAndSortingRepository<
     Iterable<Settings> findAll();
 
     /**
-     * The solution is to explicitly write the query
+     * The workaround is to explicitly write the query
      *     <code>
      *         @Query("#{#n1ql.selectEntity} WHERE #{#n1ql.filter} AND property = '#{#property}'")
      *         Settings findByProperty(@Param("property") Value property);
